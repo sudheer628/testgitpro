@@ -1,4 +1,41 @@
+git fetch
+---------
+
 git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.
 
-
+git fetch --prune
+-----------------
 git remote prune and git fetch --prune do the same thing: deleting the refs to the branches that don't exist on the remote, as you said. 
+
+how can i check the changes of remote branch after git fetch
+------------------------------------------------------------
+git branch -r
+
+Compare a remote branch with a local branch -- git diff branch-name..origin/branch-name
+View the commit history of a remote branch -- git log origin/branch-name
+
+what is differnce between "pull from" and "fetch"
+-------------------------------------------------
+1. **Pull From**:
+   - When you select "Pull from" in VS Code, you are initiating a Git pull operation. This means you are not only fetching changes from the remote repository but also merging or rebasing those changes into your current branch.
+   - "Pull from" is often used to update your local branch with changes from a remote branch. It's a combination of "git fetch" followed by "git merge" or "git rebase," depending on your Git configuration.
+
+   - **Use Case**: You would typically use "Pull from" when you want to incorporate the latest changes from a remote branch into your current working branch.
+
+2. **Fetch**:
+   - When you choose "Fetch" in VS Code, you are initiating a Git fetch operation. This operation retrieves changes from the remote repository but does not automatically merge or rebase those changes into your current branch.
+   - "Fetch" is useful for updating your remote-tracking branches and checking what changes are available on the remote without automatically applying them to your local working branch.
+
+   - **Use Case**: You would use "Fetch" when you want to see what changes have occurred on the remote repository but want to decide later whether to merge, rebase, or perform other actions with those changes.
+
+what is the difference between "git fetch" and "git fetch from all remotes"
+---------------------------------------------------------------------------
+
+1. **Git Fetch**:
+   - When you perform a "Git Fetch" operation in VS Code, it fetches changes from the default remote repository associated with the current branch. This is similar to running "git fetch" from the command line within your Git repository.
+   - It updates your remote-tracking branches for the default remote (usually "origin") in your local repository.
+
+2. **Git Fetch from All Remotes**:
+   - In VS Code, the "Git Fetch from All Remotes" option is not a standard Git command but is a specific feature provided by some Git extensions.
+   - If your Git extension in VS Code supports this feature, it would fetch changes from all remote repositories configured in your Git project, not just the default remote (e.g., "origin").
+   - This can be useful if you have multiple remotes configured in your project and you want to fetch changes from all of them at once.

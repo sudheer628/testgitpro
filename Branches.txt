@@ -1,10 +1,41 @@
-
+git branch --> check local dir branch
 git branch -r --> check remote branch
 
 # How to remove branches that are already removed from GITHUB
-git fetch --prune
-Then restart visual studio to remove the branches from the command palette
+git fetch --prune (Then restart visual studio to remove the branches from the command palette)
 
 
-origin/HEAD represents the default branch on the remote.origin/HEAD -> origin/master means, that your default remote branch is master branch. And based on the output of git branch -r it is seen, that on remote server you have only master
+origin/HEAD represents the default branch on the remote.origin/HEAD -> origin/master means, that your default remote branch is master branch. 
+and based on the output of git branch -r it is seen, that on remote server you have only master
+
+MERGE vs REBASE
+===============
+
+Both merging and rebasing are Git operations used to incorporate changes from one branch into another, but they do so in different ways and have distinct use cases. Here's a breakdown of the key differences between merging and rebasing branches in Git:
+
+**Merging**:
+
+1. **Creates a new merge commit**: When you merge one branch into another, Git creates a new merge commit that has two parent commits—one from each branch being merged. This merge commit represents the integration of changes from the source branch into the target branch.
+
+2. **Preserves branch history**: Merging preserves the commit history of both branches. It shows when and where the branches diverged and when they were merged.
+
+3. **Easy to understand**: Merging is straightforward and easy to understand in terms of the branch history. It clearly indicates when changes were integrated into the target branch.
+
+4. **Suitable for collaborative workflows**: Merging is a good choice when you want to combine the work of multiple contributors and maintain a clear history of who did what and when.
+
+**Rebasing**:
+
+1. **Recreates the commit history**: When you rebase one branch onto another, Git essentially replays the commits from the source branch onto the tip of the target branch. This results in a linear commit history without merge commits.
+
+2. **Does not preserve branch history**: Rebasing creates a linear history by discarding the branch-specific commit history of the source branch. It appears as if you had made all the changes directly on top of the target branch.
+
+3. **May lead to a cleaner history**: Rebasing can produce a cleaner and more linear commit history, which some developers prefer for its simplicity and readability.
+
+4. **Useful for feature branches**: Rebasing is often used for feature branches or topic branches where you want to incorporate the latest changes from the main branch and present your work as a clean, linear series of commits.
+
+**When to Choose Merge or Rebase**:
+
+- **Merge**: Use merging when you want to preserve the history of your branches, especially in collaborative or long-running development workflows. It clearly shows the branching and merging points.
+
+- **Rebase**: Use rebasing when you want to create a cleaner, linear history or when working on feature branches that need to be synchronized with the latest changes from the main branch. Be cautious with rebasing if you're collaborating with others, as it rewrites commit history, which can lead to conflicts for collaborators.
 
