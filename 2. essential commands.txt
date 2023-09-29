@@ -1,0 +1,80 @@
+essential commands of github
+----------------------------
+origin
+======
+Git repositories will have just one remote, usually named origin.
+it is used instead of that original repository's URL - and thereby makes referencing much easier.
+
+Note that origin is by no means a "magical" name, but just a standard convention. Although it makes sense to leave this convention untouched, you could perfectly rename it without losing any functionality.
+
+In the following example, the URL parameter to the "clone" command becomes the "origin" for the cloned local repository:
+
+git clone https://github.com/gittower/git-crash-course.git
+
+git push origin - by default pushes all your branches to the origin. While
+
+git push origin master - pushing your master branch to the origin.
+
+
+$ git remote show origin
+warning: ----------------- SECURITY WARNING ----------------
+warning: | TLS certificate verification has been disabled! |
+warning: ---------------------------------------------------
+warning: HTTPS connections may not be secure. See https://aka.ms/gcm/tlsverify for more information.
+warning: redirecting to https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation.git/
+* remote origin
+  Fetch URL: https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation
+  Push  URL: https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+$ git ls-remote --get-url origin
+https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation
+
+$ git remote -v
+origin  https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation (fetch)
+origin  https://gitlab-ucc.tools.aws.vodafone.com/sai.sudheerkolagatla/cisco-config-automation (push)
+
+Git FETCH PULL MERGE
+====================
+
+git pull command is meant to be a convenient shorthand for git fetch followed by git merge.
+
+git pull origin master means run 'git fetch origin' first, then run 'git merge origin/master'.
+
+commit, branch, tag, HEAD
+=========================
+Commit a state of the code base - is like taking a snapshot of that project
+
+git commit -am ===> automatically stage the changes and commits - but it is dangerous.
+
+git reset HEAD^ --soft (Save your changes, back to last commit)
+
+git reset HEAD^ --hard (Discard changes, back to last commit)
+
+Branch a reference to a commit; can have a tracked upstream
+Tag a reference (standard) or an object (annotated)
+HEAD a place where your working directory is now
+
+
+ls-files & rm
+=============
+
+git ls-files ---> list the files
+git rm ---> remove file from working directory & staging area.
+
+mv
+==
+
+git mv file1.txt file2.txt --> rename the files
+
+stash pop vs drop
+=================
+git stash pop removes the top stashed state and apply it on top of the current working tree. 
+git stash drop just removes that state, not applying it.
+

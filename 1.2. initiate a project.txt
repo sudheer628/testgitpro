@@ -1,0 +1,31 @@
+
+git init -- turn an existing directory into a git repo
+
+git clone -- clone a repo that is already exist in github/gitlab ..etc
+
+# If you want to add a new remote for the first time
+git remote add origin git@github.com:<username>/<repo name>.git
+
+# git remote set-url command changes an existing remote repository URL.
+git remote set-url origin https://github.com/<username>/<repo name>.git
+
+
+creating a project in GUI:
+1) access the repository website and create a project repo.
+2) curl -u 'username' https://api.github.com/user/repos -d '{"name: "repo name"}'
+3) change the URL of a remote git repo - git remote set-url origin new.git.url/here
+----------------------------------------------------------------------------------------
+push an existing repository from the command line
+
+git remote add origin https://github.com/sudheer628/Moon.git
+git branch -M main
+git push -u origin main
+
+-----------------------------------------------------------------------------------------
+mkdir Moon
+cd Moon
+git init
+
+.git sub directory is created, it it hidden .. you are not supposed to touch it,  
+.git folder contains all the information that is necessary for your project and it stores the infor about our project history.
+

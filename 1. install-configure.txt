@@ -1,0 +1,38 @@
+Git for all platforms: http://git-scm.com
+
+linux Ubuntu/Debian:
+$ sudo apt-get install git
+
+linux Fedora:
+$ sudo yum install git
+
+windows:
+https://gitforwindows.org/
+
+Mac:
+brew install git
+
+save username -
+$ git config --global user.name "sai.sudheer"
+$ git config --global user.email "sai@mail.com"
+
+save credentials -
+git config --global credential.helper store
+
+change default editor -
+git config --global core.editor "code --wait"
+
+edit settings -
+git config --global -e
+
+line end conflicts -
+git config --global core.autocrlf <input for mac ! true for windows>
+
+
+GUI Tools
+=========
+
+https://www.sourcetreeapp.com/ -- windows & mac
+https://www.gitkraken.com/git-client -- linux
+
+

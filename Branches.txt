@@ -1,0 +1,10 @@
+
+git branch -r --> check remote branch
+
+# How to remove branches that are already removed from GITHUB
+git fetch --prune
+Then restart visual studio to remove the branches from the command palette
+
+
+origin/HEAD represents the default branch on the remote.origin/HEAD -> origin/master means, that your default remote branch is master branch. And based on the output of git branch -r it is seen, that on remote server you have only master
+

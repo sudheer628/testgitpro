@@ -1,0 +1,18 @@
+
+version control system ---> track history & work together
+VCS ------> 1) centralized - subversion (if server goes offline, developers wont be able to access the code)
+			2) distributed - GIT (each developer have their own copy of code locally)
+
+GIT is free and open source.
+
+=======================================================
+No more copies, when you finish your work on a significant update for your application or a bug fix, you just need to “push” your project online to save it.
+
+
+Delete and break your code; you just need to type a command to come back to the previous version and continue your work.
+
+Work with your friends without sending an e-mail with the compressed project each time the code changes.
+
+You can afford to forget what you did. A simple command is necessary to check your changes since the last time you saved your work.
+
+=======================================================

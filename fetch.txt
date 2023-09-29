@@ -1,0 +1,4 @@
+git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.
+
+
+git remote prune and git fetch --prune do the same thing: deleting the refs to the branches that don't exist on the remote, as you said. 
